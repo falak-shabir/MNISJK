@@ -1,0 +1,2612 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>BTS ARMY Universe 💜</title>
+
+<meta name="description"
+content="A beautiful fan-made BTS ARMY website featuring RM, Jin, SUGA, j-hope, Jimin, V and Jung Kook.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link rel="preconnect"
+href="https://fonts.gstatic.com"
+crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Poppins:wght@300;400;500;600;700;800&display=swap"
+rel="stylesheet">
+
+
+<style>
+
+/* =====================================================
+   BASIC RESET
+===================================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
+
+:root{
+
+    --purple:#9b5cff;
+    --light-purple:#c084fc;
+    --dark-purple:#6d28d9;
+
+    --black:#050208;
+    --dark:#0b0612;
+
+    --white:#ffffff;
+    --gray:#aaa4b4;
+
+}
+
+body{
+
+    font-family:"Poppins",sans-serif;
+
+    background:
+
+    radial-gradient(
+        circle at 10% 10%,
+        rgba(139,92,246,.18),
+        transparent 28%
+    ),
+
+    radial-gradient(
+        circle at 90% 80%,
+        rgba(192,132,252,.14),
+        transparent 30%
+    ),
+
+    var(--black);
+
+    color:white;
+
+    overflow-x:hidden;
+
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+button,
+input{
+    font-family:inherit;
+}
+
+
+/* =====================================================
+   NAVBAR
+===================================================== */
+
+header{
+
+    position:fixed;
+
+    top:0;
+    left:0;
+
+    width:100%;
+
+    padding:18px 7%;
+
+    z-index:1000;
+
+    background:rgba(5,2,8,.72);
+
+    backdrop-filter:blur(20px);
+
+    border-bottom:
+    1px solid rgba(255,255,255,.08);
+
+}
+
+nav{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+}
+
+.logo{
+
+    font-family:"Montserrat";
+
+    font-size:25px;
+
+    font-weight:800;
+
+    letter-spacing:1px;
+
+}
+
+.logo span{
+    color:var(--light-purple);
+}
+
+.nav-links{
+
+    display:flex;
+
+    gap:30px;
+
+    list-style:none;
+
+}
+
+.nav-links a{
+
+    color:#ddd;
+
+    font-size:14px;
+
+    transition:.3s;
+
+}
+
+.nav-links a:hover{
+    color:var(--light-purple);
+}
+
+.menu{
+
+    display:none;
+
+    font-size:28px;
+
+    cursor:pointer;
+
+}
+
+
+/* =====================================================
+   HERO
+===================================================== */
+
+.hero{
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    padding:130px 7% 80px;
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+.hero-content{
+    max-width:900px;
+    z-index:5;
+}
+
+.hero-small{
+
+    color:var(--light-purple);
+
+    font-size:13px;
+
+    letter-spacing:6px;
+
+    font-weight:600;
+
+}
+
+.hero h1{
+
+    font-family:"Montserrat";
+
+    font-size:clamp(80px,13vw,160px);
+
+    line-height:.9;
+
+    margin-top:20px;
+
+    font-weight:800;
+
+    background:
+
+    linear-gradient(
+        90deg,
+        #fff,
+        #c084fc,
+        #8b5cf6,
+        #fff
+    );
+
+    background-size:300%;
+
+    -webkit-background-clip:text;
+
+    color:transparent;
+
+    animation:gradient 6s infinite;
+
+}
+
+@keyframes gradient{
+
+    0%{
+        background-position:0%;
+    }
+
+    50%{
+        background-position:100%;
+    }
+
+    100%{
+        background-position:0%;
+    }
+
+}
+
+.hero h2{
+
+    margin-top:25px;
+
+    font-size:22px;
+
+    font-weight:400;
+
+}
+
+.hero p{
+
+    max-width:680px;
+
+    margin:20px auto;
+
+    color:var(--gray);
+
+    line-height:1.8;
+
+}
+
+.hero-buttons{
+
+    margin-top:35px;
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:15px;
+
+    flex-wrap:wrap;
+
+}
+
+.btn{
+
+    padding:14px 28px;
+
+    border-radius:50px;
+
+    border:none;
+
+    cursor:pointer;
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+.btn-primary{
+
+    color:white;
+
+    background:
+
+    linear-gradient(
+        135deg,
+        #6d28d9,
+        #c084fc
+    );
+
+    box-shadow:
+    0 10px 40px
+    rgba(139,92,246,.3);
+
+}
+
+.btn-primary:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:
+    0 15px 60px
+    rgba(139,92,246,.55);
+
+}
+
+.btn-outline{
+
+    color:white;
+
+    background:
+    rgba(255,255,255,.05);
+
+    border:
+    1px solid
+    rgba(255,255,255,.15);
+
+}
+
+.btn-outline:hover{
+
+    background:
+    rgba(255,255,255,.1);
+
+    transform:translateY(-5px);
+
+}
+
+
+/* =====================================================
+   STARS
+===================================================== */
+
+.star{
+
+    position:absolute;
+
+    width:3px;
+    height:3px;
+
+    border-radius:50%;
+
+    background:white;
+
+    animation:
+    twinkle 2s infinite alternate;
+
+}
+
+@keyframes twinkle{
+
+    from{
+        opacity:.1;
+        transform:scale(.5);
+    }
+
+    to{
+        opacity:1;
+        transform:scale(1.5);
+    }
+
+}
+
+
+/* =====================================================
+   SECTIONS
+===================================================== */
+
+section{
+    padding:110px 7%;
+}
+
+.section-title{
+
+    text-align:center;
+
+    margin-bottom:60px;
+
+}
+
+.section-title small{
+
+    color:var(--light-purple);
+
+    letter-spacing:5px;
+
+    font-weight:600;
+
+}
+
+.section-title h2{
+
+    font-family:"Montserrat";
+
+    font-size:45px;
+
+    margin:12px 0;
+
+}
+
+.section-title h2 span{
+    color:var(--light-purple);
+}
+
+.section-title p{
+    color:var(--gray);
+}
+
+
+/* =====================================================
+   STATS
+===================================================== */
+
+.stats{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(4,1fr);
+
+    gap:20px;
+
+}
+
+.stat{
+
+    padding:32px;
+
+    text-align:center;
+
+    border-radius:25px;
+
+    background:
+    rgba(255,255,255,.055);
+
+    border:
+    1px solid
+    rgba(255,255,255,.08);
+
+    backdrop-filter:blur(20px);
+
+    transition:.4s;
+
+}
+
+.stat:hover{
+
+    transform:translateY(-8px);
+
+    border-color:
+    rgba(192,132,252,.5);
+
+}
+
+.stat h3{
+
+    color:var(--light-purple);
+
+    font-size:38px;
+
+}
+
+.stat p{
+    color:var(--gray);
+}
+
+
+/* =====================================================
+   SEARCH
+===================================================== */
+
+.search-box{
+
+    max-width:520px;
+
+    margin:
+    0 auto 50px;
+
+}
+
+.search-box input{
+
+    width:100%;
+
+    padding:17px 25px;
+
+    border-radius:50px;
+
+    outline:none;
+
+    border:
+    1px solid
+    rgba(255,255,255,.12);
+
+    background:
+    rgba(255,255,255,.055);
+
+    color:white;
+
+    font-size:15px;
+
+}
+
+.search-box input::placeholder{
+    color:#8f8998;
+}
+
+
+/* =====================================================
+   MEMBERS
+===================================================== */
+
+.members{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(4,1fr);
+
+    gap:25px;
+
+}
+
+.member-card{
+
+    position:relative;
+
+    overflow:hidden;
+
+    min-height:500px;
+
+    border-radius:28px;
+
+    background:
+    linear-gradient(
+        180deg,
+        rgba(255,255,255,.07),
+        rgba(255,255,255,.025)
+    );
+
+    border:
+    1px solid
+    rgba(255,255,255,.08);
+
+    backdrop-filter:blur(20px);
+
+    transition:
+    transform .5s,
+    box-shadow .5s;
+
+}
+
+.member-card:hover{
+
+    transform:translateY(-13px);
+
+    border-color:
+    rgba(192,132,252,.6);
+
+    box-shadow:
+    0 25px 70px
+    rgba(139,92,246,.25);
+
+}
+
+
+/* =====================================================
+   MEMBER IMAGE
+===================================================== */
+
+.member-image{
+
+    height:355px;
+
+    overflow:hidden;
+
+    position:relative;
+
+}
+
+.member-image img{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+    object-position:center top;
+
+    transition:transform .7s;
+
+}
+
+.member-card:hover
+.member-image img{
+
+    transform:scale(1.08);
+
+}
+
+.member-image::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+    bottom:0;
+
+    width:100%;
+    height:45%;
+
+    background:
+    linear-gradient(
+        transparent,
+        rgba(10,3,17,.95)
+    );
+
+}
+
+
+/* =====================================================
+   NUMBER
+===================================================== */
+
+.number{
+
+    position:absolute;
+
+    top:15px;
+    left:15px;
+
+    padding:7px 12px;
+
+    border-radius:50px;
+
+    background:
+    rgba(0,0,0,.55);
+
+    backdrop-filter:blur(10px);
+
+    font-size:12px;
+
+    z-index:5;
+
+}
+
+
+/* =====================================================
+   FAVORITE
+===================================================== */
+
+.favorite{
+
+    position:absolute;
+
+    right:15px;
+    top:15px;
+
+    width:40px;
+    height:40px;
+
+    border-radius:50%;
+
+    border:none;
+
+    background:
+    rgba(0,0,0,.55);
+
+    color:white;
+
+    font-size:19px;
+
+    cursor:pointer;
+
+    z-index:5;
+
+}
+
+.favorite.active{
+    color:#ff63b8;
+}
+
+
+/* =====================================================
+   MEMBER INFORMATION
+===================================================== */
+
+.member-info{
+    padding:20px;
+}
+
+.member-info h3{
+
+    font-family:"Montserrat";
+
+    font-size:25px;
+
+}
+
+.real-name{
+
+    color:var(--light-purple);
+
+    font-size:13px;
+
+    margin-top:3px;
+
+}
+
+.member-role{
+
+    color:var(--gray);
+
+    font-size:13px;
+
+    margin-top:9px;
+
+}
+
+.member-button{
+
+    margin-top:17px;
+
+    border:none;
+
+    background:none;
+
+    color:var(--light-purple);
+
+    cursor:pointer;
+
+    font-weight:600;
+
+}
+
+.member-button:hover{
+    letter-spacing:1px;
+}
+
+
+/* =====================================================
+   ABOUT
+===================================================== */
+
+.about{
+
+    display:grid;
+
+    grid-template-columns:
+    1fr 1fr;
+
+    gap:70px;
+
+    align-items:center;
+
+}
+
+.about-text small{
+
+    color:var(--light-purple);
+
+    letter-spacing:4px;
+
+}
+
+.about-text h2{
+
+    font-family:"Montserrat";
+
+    font-size:48px;
+
+    margin:
+    15px 0 25px;
+
+}
+
+.about-text h2 span{
+    color:var(--light-purple);
+}
+
+.about-text p{
+
+    color:var(--gray);
+
+    line-height:1.9;
+
+    margin-bottom:20px;
+
+}
+
+.quote{
+
+    border-left:
+    3px solid
+    var(--light-purple);
+
+    padding-left:20px;
+
+    font-style:italic;
+
+}
+
+
+/* =====================================================
+   ARMY SYMBOL
+===================================================== */
+
+.about-visual{
+
+    min-height:430px;
+
+    border-radius:35px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    background:
+
+    radial-gradient(
+        circle,
+        rgba(139,92,246,.35),
+        transparent 60%
+    );
+
+    border:
+    1px solid
+    rgba(255,255,255,.1);
+
+}
+
+.army-symbol{
+
+    width:190px;
+    height:190px;
+
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
+    border:
+    2px solid
+    var(--light-purple);
+
+    transform:rotate(45deg);
+
+    box-shadow:
+    0 0 80px
+    rgba(168,85,247,.5);
+
+    animation:
+    floatSymbol 4s infinite ease-in-out;
+
+}
+
+.army-symbol span{
+
+    transform:rotate(-45deg);
+
+    font-size:70px;
+
+}
+
+@keyframes floatSymbol{
+
+    0%,100%{
+        transform:
+        rotate(45deg)
+        translateY(0);
+    }
+
+    50%{
+        transform:
+        rotate(45deg)
+        translateY(-18px);
+    }
+
+}
+
+
+/* =====================================================
+   MUSIC VISUALIZER
+===================================================== */
+
+.visualizer{
+
+    height:130px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:7px;
+
+}
+
+.bar{
+
+    width:5px;
+
+    height:30px;
+
+    border-radius:10px;
+
+    background:
+    linear-gradient(
+        #7c3aed,
+        #c084fc
+    );
+
+    animation:
+    music 1s infinite ease-in-out;
+
+}
+
+.bar:nth-child(2){
+    animation-delay:.1s;
+}
+
+.bar:nth-child(3){
+    animation-delay:.2s;
+}
+
+.bar:nth-child(4){
+    animation-delay:.3s;
+}
+
+.bar:nth-child(5){
+    animation-delay:.4s;
+}
+
+.bar:nth-child(6){
+    animation-delay:.5s;
+}
+
+.bar:nth-child(7){
+    animation-delay:.6s;
+}
+
+.bar:nth-child(8){
+    animation-delay:.7s;
+}
+
+@keyframes music{
+
+    0%,100%{
+        height:25px;
+    }
+
+    50%{
+        height:95px;
+    }
+
+}
+
+
+/* =====================================================
+   TIMELINE
+===================================================== */
+
+.timeline{
+
+    max-width:900px;
+
+    margin:auto;
+
+    position:relative;
+
+}
+
+.timeline::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:50%;
+
+    width:2px;
+
+    height:100%;
+
+    background:
+    linear-gradient(
+        #7c3aed,
+        #c084fc
+    );
+
+}
+
+.timeline-item{
+
+    width:50%;
+
+    padding:
+    20px 40px;
+
+}
+
+.timeline-item:nth-child(even){
+    margin-left:50%;
+}
+
+.timeline-content{
+
+    padding:25px;
+
+    border-radius:22px;
+
+    background:
+    rgba(255,255,255,.05);
+
+    border:
+    1px solid
+    rgba(255,255,255,.08);
+
+}
+
+.timeline-content h3{
+
+    color:var(--light-purple);
+
+    margin-bottom:8px;
+
+}
+
+.timeline-content p{
+
+    color:var(--gray);
+
+    line-height:1.7;
+
+    font-size:14px;
+
+}
+
+
+/* =====================================================
+   ARMY SECTION
+===================================================== */
+
+.army-section{
+
+    text-align:center;
+
+    background:
+
+    radial-gradient(
+        circle at center,
+        rgba(126,34,206,.23),
+        transparent 65%
+    );
+
+}
+
+.heart{
+
+    font-size:55px;
+
+    animation:
+    heartbeat 1.2s infinite;
+
+}
+
+@keyframes heartbeat{
+
+    0%,100%{
+        transform:scale(1);
+    }
+
+    50%{
+        transform:scale(1.3);
+    }
+
+}
+
+.army-section h2{
+
+    font-family:"Montserrat";
+
+    font-size:
+    clamp(42px,7vw,70px);
+
+    margin:15px 0;
+
+}
+
+.army-section p{
+
+    color:var(--gray);
+
+    margin-bottom:30px;
+
+}
+
+
+/* =====================================================
+   MODAL
+===================================================== */
+
+.modal{
+
+    position:fixed;
+
+    inset:0;
+
+    display:none;
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:20px;
+
+    background:
+    rgba(0,0,0,.78);
+
+    backdrop-filter:blur(15px);
+
+    z-index:3000;
+
+}
+
+.modal.active{
+    display:flex;
+}
+
+.modal-box{
+
+    width:100%;
+
+    max-width:600px;
+
+    padding:40px;
+
+    border-radius:30px;
+
+    background:#12091c;
+
+    border:
+    1px solid
+    rgba(192,132,252,.35);
+
+    box-shadow:
+    0 30px 100px
+    rgba(0,0,0,.7);
+
+    position:relative;
+
+    animation:
+    modalOpen .35s ease;
+
+}
+
+@keyframes modalOpen{
+
+    from{
+        opacity:0;
+        transform:scale(.8);
+    }
+
+    to{
+        opacity:1;
+        transform:scale(1);
+    }
+
+}
+
+.close-modal{
+
+    position:absolute;
+
+    right:20px;
+    top:15px;
+
+    border:none;
+
+    background:none;
+
+    color:white;
+
+    font-size:28px;
+
+    cursor:pointer;
+
+}
+
+.modal-box h2{
+
+    font-family:"Montserrat";
+
+    font-size:32px;
+
+    color:var(--light-purple);
+
+}
+
+.modal-box h4{
+
+    color:#aaa;
+
+    margin-top:5px;
+
+}
+
+.modal-role{
+
+    color:var(--light-purple);
+
+    margin-top:15px;
+
+}
+
+.modal-description{
+
+    color:var(--gray);
+
+    line-height:1.9;
+
+    margin-top:15px;
+
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+footer{
+
+    padding:60px 7%;
+
+    text-align:center;
+
+    border-top:
+    1px solid
+    rgba(255,255,255,.08);
+
+    color:var(--gray);
+
+}
+
+footer .logo{
+    margin-bottom:12px;
+}
+
+
+/* =====================================================
+   HIDDEN
+===================================================== */
+
+.hidden{
+    display:none!important;
+}
+
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media(max-width:1100px){
+
+    .members{
+        grid-template-columns:
+        repeat(2,1fr);
+    }
+
+    .stats{
+        grid-template-columns:
+        repeat(2,1fr);
+    }
+
+}
+
+
+@media(max-width:750px){
+
+    section{
+        padding:80px 5%;
+    }
+
+    .menu{
+        display:block;
+    }
+
+    .nav-links{
+
+        position:absolute;
+
+        top:70px;
+
+        right:-100%;
+
+        width:100%;
+
+        flex-direction:column;
+
+        text-align:center;
+
+        padding:30px;
+
+        background:
+        rgba(5,2,8,.97);
+
+        transition:.4s;
+
+    }
+
+    .nav-links.active{
+        right:0;
+    }
+
+    .members{
+        grid-template-columns:1fr;
+    }
+
+    .stats{
+        grid-template-columns:1fr;
+    }
+
+    .about{
+        grid-template-columns:1fr;
+    }
+
+    .about-text h2{
+        font-size:36px;
+    }
+
+    .timeline::before{
+        left:10px;
+    }
+
+    .timeline-item,
+    .timeline-item:nth-child(even){
+
+        width:100%;
+
+        margin-left:0;
+
+        padding-left:35px;
+
+        padding-right:0;
+
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     NAVIGATION
+===================================================== -->
+
+<header>
+
+<nav>
+
+<a href="#home" class="logo">
+
+    BTS
+    <span>ARMY</span>
+    💜
+
+</a>
+
+
+<ul class="nav-links">
+
+<li>
+<a href="#home">Home</a>
+</li>
+
+<li>
+<a href="#members">Members</a>
+</li>
+
+<li>
+<a href="#about">About</a>
+</li>
+
+<li>
+<a href="#journey">Journey</a>
+</li>
+
+<li>
+<a href="#army">ARMY</a>
+</li>
+
+</ul>
+
+
+<div class="menu">
+    ☰
+</div>
+
+</nav>
+
+</header>
+
+
+<!-- =====================================================
+     HERO
+===================================================== -->
+
+<section class="hero" id="home">
+
+<div class="hero-content">
+
+<div class="hero-small">
+    WELCOME TO THE
+</div>
+
+
+<h1>
+    BTS
+</h1>
+
+
+<h2>
+    Seven Stars. One Universe. One ARMY. 💜
+</h2>
+
+
+<p>
+
+Explore the world of BTS and discover
+the seven members who turned music,
+friendship and dreams into a global
+phenomenon.
+
+</p>
+
+
+<div class="hero-buttons">
+
+<a
+href="#members"
+class="btn btn-primary">
+
+    Meet The Members
+
+</a>
+
+
+<a
+href="#army"
+class="btn btn-outline">
+
+    💜 I Purple You
+
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
+     STATS
+===================================================== -->
+
+<section>
+
+<div class="stats">
+
+
+<div class="stat">
+
+<h3>7</h3>
+
+<p>Members</p>
+
+</div>
+
+
+<div class="stat">
+
+<h3>2013</h3>
+
+<p>Debut</p>
+
+</div>
+
+
+<div class="stat">
+
+<h3>∞</h3>
+
+<p>Memories</p>
+
+</div>
+
+
+<div class="stat">
+
+<h3>💜</h3>
+
+<p>ARMY</p>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
+     MEMBERS
+===================================================== -->
+
+<section id="members">
+
+
+<div class="section-title">
+
+<small>
+    THE SEVEN STARS
+</small>
+
+<h2>
+
+Meet The
+<span>Members</span>
+
+</h2>
+
+<p>
+Seven personalities. Seven journeys. One BTS.
+</p>
+
+</div>
+
+
+<!-- SEARCH -->
+
+<div class="search-box">
+
+<input
+type="text"
+id="search"
+placeholder="🔍 Search any BTS member...">
+
+</div>
+
+
+<div class="members" id="membersGrid">
+
+
+<!-- RM -->
+
+<div
+class="member-card"
+data-name="rm kim namjun namjoon">
+
+<span class="number">
+    01
+</span>
+
+<button
+class="favorite"
+onclick="toggleFavorite(this)">
+    ♡
+</button>
+
+<div class="member-image">
+
+<img
+src="https://commons.wikimedia.org/wiki/Special:Redirect/file/RM_in_the_Oval_Office_of_the_White_House%2C_May_31%2C_2022_%28cropped%29.jpg"
+alt="RM Kim Nam-jun">
+
+</div>
+
+<div class="member-info">
+
+<h3>RM</h3>
+
+<div class="real-name">
+    Kim Nam-jun
+</div>
+
+<div class="member-role">
+    Leader • Rapper • Songwriter
+</div>
+
+<button
+class="member-button"
+onclick="openProfile(
+'RM',
+'Kim Nam-jun',
+'Leader • Rapper • Songwriter',
+'RM is the leader of BTS and is known for his thoughtful lyrics, leadership, artistic interests and reflective personality.'
+)">
+Explore Profile →
+</button>
+
+</div>
+
+</div>
+
+
+<!-- JIN -->
+
+<div
+class="member-card"
+data-name="jin kim seokjin seokjin">
+
+<span class="number">
+    02
+</span>
+
+<button
+class="favorite"
+onclick="toggleFavorite(this)">
+    ♡
+</button>
+
+<div class="member-image">
+
+<img
+src="https://commons.wikimedia.org/wiki/Special:Redirect/file/BTS_Jin_at_Maison_Fred%2C_13_March_2025_04.png"
+alt="Jin Kim Seok-jin">
+
+</div>
+
+<div class="member-info">
+
+<h3>Jin</h3>
+
+<div class="real-name">
+    Kim Seok-jin
+</div>
+
+<div class="member-role">
+    Vocalist • Visual • Performer
+</div>
+
+<button
+class="member-button"
+onclick="openProfile(
+'Jin',
+'Kim Seok-jin',
+'Vocalist • Visual • Performer',
+'Jin is known for his vocals, humor, warmth and memorable personality.'
+)">
+Explore Profile →
+</button>
+
+</div>
+
+</div>
+
+
+<!-- SUGA -->
+
+<div
+class="member-card"
+data-name="suga min yoongi yoongi">
+
+<span class="number">
+    03
+</span>
+
+<button
+class="favorite"
+onclick="toggleFavorite(this)">
+    ♡
+</button>
+
+<div class="member-image">
+
+<img
+src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Min_Yoon-gi_May_2018.jpg"
+alt="SUGA Min Yoon-gi">
+
+</div>
+
+<div class="member-info">
+
+<h3>SUGA</h3>
+
+<div class="real-name">
+    Min Yoon-gi
+</div>
+
+<div class="member-role">
+    Rapper • Producer • Songwriter
+</div>
+
+<button
+class="member-button"
+onclick="openProfile(
+'SUGA',
+'Min Yoon-gi',
+'Rapper • Producer • Songwriter',
+'SUGA is known for his rap style, songwriting, music production and honest musical expression.'
+)">
+Explore Profile →
+</button>
+
+</div>
+
+</div>
+
+
+<!-- J-HOPE -->
+
+<div
+class="member-card"
+data-name="jhope j-hope jung hoseok hoseok">
+
+<span class="number">
+    04
+</span>
+
+<button
+class="favorite"
+onclick="toggleFavorite(this)">
+    ♡
+</button>
+
+<div class="member-image">
+
+<img
+src="https://commons.wikimedia.org/wiki/Special:Redirect/file/J-Hope_of_BTS%2C_November_22%2C_2024.png"
+alt="j-hope Jung Ho-seok">
+
+</div>
+
+<div class="member-info">
+
+<h3>j-hope</h3>
+
+<div class="real-name">
+    Jung Ho-seok
+</div>
+
+<div class="member-role">
+    Dancer • Rapper • Performer
+</div>
+
+<button
+class="member-button"
+onclick="openProfile(
+'j-hope',
+'Jung Ho-seok',
+'Dancer • Rapper • Performer',
+'j-hope is celebrated for his dancing, stage presence, energy and positive personality.'
+)">
+Explore Profile →
+</button>
+
+</div>
+
+</div>
+
+
+<!-- JIMIN -->
+
+<div
+class="member-card"
+data-name="jimin park jimin">
+
+<span class="number">
+    05
+</span>
+
+<button
+class="favorite"
+onclick="toggleFavorite(this)">
+    ♡
+</button>
+
+<div class="member-image">
+
+<img
+src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Park_Ji-min_for_Dispatch_%22Boy_With_Luv%22_MV_behind_the_scene_shooting%2C_15_March_2019_03_%28cropped%29.jpg"
+alt="Jimin Park Ji-min">
+
+</div>
+
+<div class="member-info">
+
+<h3>Jimin</h3>
+
+<div class="real-name">
+    Park Ji-min
+</div>
+
+<div class="member-role">
+    Vocalist • Dancer • Performer
+</div>
+
+<button
+class="member-button"
+onclick="openProfile(
+'Jimin',
+'Park Ji-min',
+'Vocalist • Dancer • Performer',
+'Jimin is known for his expressive dancing, distinctive vocals and emotional performances.'
+)">
+Explore Profile →
+</button>
+
+</div>
+
+</div>
+
+
+<!-- V -->
+
+<div
+class="member-card"
+data-name="v kim taehyung taehyung">
+
+<span class="number">
+    06
+</span>
+
+<button
+class="favorite"
+onclick="toggleFavorite(this)">
+    ♡
+</button>
+
+<div class="member-image">
+
+<img
+src="https://commons.wikimedia.org/wiki/Special:Redirect/file/V_%28Kim_Tae-hyung%29_at_Incheon_International_Airport_on_March_24%2C_2016.jpg"
+alt="V Kim Tae-hyung">
+
+</div>
+
+<div class="member-info">
+
+<h3>V</h3>
+
+<div class="real-name">
+    Kim Tae-hyung
+</div>
+
+<div class="member-role">
+    Vocalist • Artist • Performer
+</div>
+
+<button
+class="member-button"
+onclick="openProfile(
+'V',
+'Kim Tae-hyung',
+'Vocalist • Artist • Performer',
+'V is known for his distinctive voice, artistic personality, fashion and expressive performances.'
+)">
+Explore Profile →
+</button>
+
+</div>
+
+</div>
+
+
+<!-- JUNG KOOK -->
+
+<div
+class="member-card"
+data-name="jungkook jung kook jeon jungkook">
+
+<span class="number">
+    07
+</span>
+
+<button
+class="favorite"
+onclick="toggleFavorite(this)">
+    ♡
+</button>
+
+<div class="member-image">
+
+<img
+src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Jung_Kook_of_BTS%2C_February_12%2C_2026_%284%29.png"
+alt="Jung Kook Jeon Jung-kook">
+
+</div>
+
+<div class="member-info">
+
+<h3>Jung Kook</h3>
+
+<div class="real-name">
+    Jeon Jung-kook
+</div>
+
+<div class="member-role">
+    Vocalist • Dancer • Performer
+</div>
+
+<button
+class="member-button"
+onclick="openProfile(
+'Jung Kook',
+'Jeon Jung-kook',
+'Vocalist • Dancer • Performer',
+'Jung Kook is known for his vocals, dancing, performance skills and versatility.'
+)">
+Explore Profile →
+</button>
+
+</div>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
+     ABOUT
+===================================================== -->
+
+<section id="about">
+
+<div class="about">
+
+<div class="about-text">
+
+<small>
+    MORE THAN MUSIC
+</small>
+
+<h2>
+
+Welcome to the
+<span>BTS Universe</span>
+
+</h2>
+
+<p>
+
+BTS is a South Korean group whose
+music, performances and message have
+connected with people around the world.
+
+</p>
+
+<p>
+
+Their journey represents music,
+friendship, dreams, growth,
+self-expression and the special
+connection between BTS and ARMY.
+
+</p>
+
+<div class="quote">
+
+"Love yourself. Speak yourself."
+
+</div>
+
+</div>
+
+
+<div class="about-visual">
+
+<div class="army-symbol">
+
+<span>
+    💜
+</span>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
+     MUSIC
+===================================================== -->
+
+<section>
+
+<div class="section-title">
+
+<small>
+    FEEL THE MUSIC
+</small>
+
+<h2>
+
+BTS
+<span>Vibes</span>
+
+</h2>
+
+<p>
+Seven voices. One universe.
+</p>
+
+</div>
+
+
+<div class="visualizer">
+
+<div class="bar"></div>
+<div class="bar"></div>
+<div class="bar"></div>
+<div class="bar"></div>
+<div class="bar"></div>
+<div class="bar"></div>
+<div class="bar"></div>
+<div class="bar"></div>
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
+     TIMELINE
+===================================================== -->
+
+<section id="journey">
+
+<div class="section-title">
+
+<small>
+    THE JOURNEY
+</small>
+
+<h2>
+
+BTS
+<span>Timeline</span>
+
+</h2>
+
+</div>
+
+
+<div class="timeline">
+
+
+<div class="timeline-item">
+
+<div class="timeline-content">
+
+<h3>
+    2013
+</h3>
+
+<p>
+
+BTS officially debuted and
+began their journey in the
+music industry.
+
+</p>
+
+</div>
+
+</div>
+
+
+<div class="timeline-item">
+
+<div class="timeline-content">
+
+<h3>
+    2015
+</h3>
+
+<p>
+
+BTS continued developing
+their musical identity while
+their international fanbase
+grew.
+
+</p>
+
+</div>
+
+</div>
+
+
+<div class="timeline-item">
+
+<div class="timeline-content">
+
+<h3>
+    2017
+</h3>
+
+<p>
+
+BTS achieved major
+international recognition
+and expanded their global
+presence.
+
+</p>
+
+</div>
+
+</div>
+
+
+<div class="timeline-item">
+
+<div class="timeline-content">
+
+<h3>
+    2020
+</h3>
+
+<p>
+
+BTS reached major global
+milestones through music
+and international
+performances.
+
+</p>
+
+</div>
+
+</div>
+
+
+<div class="timeline-item">
+
+<div class="timeline-content">
+
+<h3>
+    Today
+</h3>
+
+<p>
+
+BTS and ARMY continue
+sharing a unique connection
+built through music and
+memories.
+
+</p>
+
+</div>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
+     ARMY
+===================================================== -->
+
+<section class="army-section" id="army">
+
+<div class="heart">
+    💜
+</div>
+
+
+<h2>
+    I Purple You
+</h2>
+
+
+<p>
+BTS × ARMY — Forever Connected.
+</p>
+
+
+<button
+class="btn btn-primary"
+onclick="purpleYou()">
+
+💜 Click For A Surprise
+
+</button>
+
+</section>
+
+
+<!-- =====================================================
+     MODAL
+===================================================== -->
+
+<div class="modal" id="profileModal">
+
+<div class="modal-box">
+
+<button
+class="close-modal"
+onclick="closeProfile">
+
+×
+
+</button>
+
+
+<h2 id="modalName">
+    RM
+</h2>
+
+
+<h4 id="modalRealName">
+    Kim Nam-jun
+</h4>
+
+
+<div
+class="modal-role"
+id="modalRole">
+
+Leader • Rapper
+
+</div>
+
+
+<p
+class="modal-description"
+id="modalDescription">
+
+Member information.
+
+</p>
+
+
+</div>
+
+</div>
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer>
+
+<div class="logo">
+
+BTS
+<span>ARMY</span>
+💜
+
+</div>
+
+
+<!-- UPDATED STATEMENT -->
+
+<p>
+Made with love for EUNBI.
+</p>
+
+
+<p
+style="font-size:12px;margin-top:12px;">
+
+Fan-made website •
+Not affiliated with BIGHIT MUSIC
+
+</p>
+
+</footer>
+
+
+<script>
+
+/* =====================================================
+   MOBILE MENU
+===================================================== */
+
+const menu =
+document.querySelector(".menu");
+
+const nav =
+document.querySelector(".nav-links");
+
+
+menu.addEventListener(
+"click",
+()=>{
+
+    nav.classList.toggle("active");
+
+});
+
+
+document
+.querySelectorAll(".nav-links a")
+.forEach(link=>{
+
+    link.addEventListener(
+    "click",
+    ()=>{
+
+        nav.classList.remove(
+            "active"
+        );
+
+    });
+
+});
+
+
+/* =====================================================
+   STARS
+===================================================== */
+
+const hero =
+document.querySelector(".hero");
+
+
+for(
+let i=0;
+i<100;
+i++
+){
+
+    const star =
+    document.createElement("div");
+
+    star.className="star";
+
+    star.style.left =
+    Math.random()*100+"%";
+
+    star.style.top =
+    Math.random()*100+"%";
+
+    star.style.animationDelay =
+    Math.random()*3+"s";
+
+    star.style.animationDuration =
+    1+Math.random()*3+"s";
+
+    hero.appendChild(star);
+
+}
+
+
+/* =====================================================
+   SEARCH MEMBERS
+===================================================== */
+
+const search =
+document.getElementById("search");
+
+const cards =
+document.querySelectorAll(".member-card");
+
+
+search.addEventListener(
+"input",
+function(){
+
+    const value =
+    this.value
+    .toLowerCase()
+    .trim();
+
+
+    cards.forEach(card=>{
+
+        const name =
+        card.dataset.name
+        .toLowerCase();
+
+
+        if(
+        name.includes(value)
+        ){
+
+            card.classList.remove(
+                "hidden"
+            );
+
+        }else{
+
+            card.classList.add(
+                "hidden"
+            );
+
+        }
+
+    });
+
+});
+
+
+/* =====================================================
+   FAVORITES
+===================================================== */
+
+function toggleFavorite(button){
+
+    button.classList.toggle(
+        "active"
+    );
+
+
+    if(
+    button.classList.contains(
+        "active"
+    )
+    ){
+
+        button.innerHTML="♥";
+
+    }else{
+
+        button.innerHTML="♡";
+
+    }
+
+}
+
+
+/* =====================================================
+   PROFILE MODAL
+===================================================== */
+
+const modal =
+document.getElementById(
+    "profileModal"
+);
+
+
+function openProfile(
+name,
+realName,
+role,
+description
+){
+
+    document.getElementById(
+        "modalName"
+    ).textContent=name;
+
+
+    document.getElementById(
+        "modalRealName"
+    ).textContent=realName;
+
+
+    document.getElementById(
+        "modalRole"
+    ).textContent=role;
+
+
+    document.getElementById(
+        "modalDescription"
+    ).textContent=description;
+
+
+    modal.classList.add(
+        "active"
+    );
+
+}
+
+
+function closeProfile(){
+
+    modal.classList.remove(
+        "active"
+    );
+
+}
+
+
+modal.addEventListener(
+"click",
+event=>{
+
+    if(
+    event.target===modal
+    ){
+
+        closeProfile();
+
+    }
+
+});
+
+
+/* =====================================================
+   PURPLE YOU
+===================================================== */
+
+function purpleYou(){
+
+    const messages=[
+
+        "💜 Borahae, ARMY!",
+
+        "💜 BTS × ARMY = FOREVER",
+
+        "✨ You are part of the BTS Universe.",
+
+        "💜 Keep your purple heart forever.",
+
+        "♾️ BTS and ARMY — Together Forever.",
+
+        "🌌 Somewhere in the universe, BTS is shining."
+
+    ];
+
+
+    const message =
+    messages[
+        Math.floor(
+            Math.random()*messages.length
+        )
+    ];
+
+
+    alert(message);
+
+}
+
+
+/* =====================================================
+   ESCAPE CLOSE
+===================================================== */
+
+document.addEventListener(
+"keydown",
+event=>{
+
+    if(
+    event.key==="Escape"
+    ){
+
+        closeProfile();
+
+    }
+
+});
+
+</script>
+
+</body>
+
+</html>
+```
